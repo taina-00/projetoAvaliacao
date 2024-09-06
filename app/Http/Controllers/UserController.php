@@ -14,13 +14,17 @@ class UserController extends Controller
         $user->email = $request->email;
 
         $user->save();
-        return redirect('/users');
+        return redirect('/listar_usuarios');
     }
 
     public function listar() {
         $users = User::all();
 
         return view("users", ["users"=>$users]);
+    }
+
+    public function formCriarUsuario() {
+        return view("cadastro_usuario");
     }
 }
 
