@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cadastrar Vendedor</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+
+<h1>Cadastro de Vendedores</h1>
     <form action="/criar_vendedor" method="post">
         @csrf
         <label for="name">Nome</label>
@@ -18,7 +21,7 @@
         <label for="comissao">Comissão</label>
         <input type="string" name="comissao">
 
-        <input type="submit" value="Cadastrar">
+        <input id="botao" type="submit" value="Cadastrar">
     </form>
 </body>
 </html>
