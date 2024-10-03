@@ -7,9 +7,10 @@ h1 {
 form {
     color: purple;
 }
-input {
-    color: white;
-}
+
+
 #botao {
     background-color: rebeccapurple;
+    color: white;
 }
+

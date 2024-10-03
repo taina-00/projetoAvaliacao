@@ -27,4 +27,11 @@ class VendedorController extends Controller
         public function formCriarVendedor() {
             return view("cadastro_vendedor");
         }
+        public function deletar ($id) {
+            $vendedor = new Vendedor;
+    
+            $vendedor->find($id) ->delete();
+            return redirect('/listar_vendedor');
+        }
     }
+    
