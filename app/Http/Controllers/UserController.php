@@ -23,6 +23,7 @@ class UserController extends Controller
         $users = User::all();
 
         return view("users", ["users" => $users]);
+
     }
 
     public function formCriarUsuario()

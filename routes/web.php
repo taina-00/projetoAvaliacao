@@ -3,6 +3,7 @@
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\VendedorController;
+use App\Http\Controllers\AppController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/cadastro_usuario', [UserController::class, "formCriarUsuario"]);
@@ -41,3 +42,7 @@ Route::get('/listar_vendedor', [VendedorController::class, 'listar']);
 Route::post('/criar_vendedor', [VendedorController::class, 'criar']);
 
 Route::delete('/deletar_vendedor/{id}', [VendedorController::class, 'deletar']);
+
+//app
+Route::get('/', [AppController::class, 'inicial']);
+
