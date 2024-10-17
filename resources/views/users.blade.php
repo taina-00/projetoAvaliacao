@@ -7,7 +7,9 @@
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-  
+  @if ($users->isEmpty())
+  <h1>Lista vazia</h1>
+  @else
   <table border="1">
     <tr>
     <th>Nome</th>
@@ -21,6 +23,7 @@
    <td> {{$user->cpf}} </td>
     <td>{{$user->email}}</td>
     <td>
+  
 
       <form method="POST" action="/deletar_usuario/{{$user-> id}}">
         @csrf
@@ -33,7 +36,7 @@
 </tr>
 @endforeach
   </table>
-  
+  @endif
 </body>
 </html>
 
